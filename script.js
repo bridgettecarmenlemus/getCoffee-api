@@ -24,12 +24,12 @@ function displayCoffeeList(coffeeList) {
   });
 }
 
-function getCoffee() {
+function getCoffee(temp) {
   setLoading();
-  fetch(`https://api.sampleapis.com/coffee/hot`)
-    .then((response) => response.json())
+  fetch(`https://api.sampleapis.com/coffee/${temp}`)
+    .then(response => response.json())
     .then(displayCoffeeList)
     .catch(console.error);
 }
 
-getCoffee();
+getCoffee('hot');
