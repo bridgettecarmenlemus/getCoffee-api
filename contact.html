@@ -10,7 +10,7 @@
 <body>
     <div class="container"></div>
     <header>
-        <h1>Contact</h1>
+        <h1 id="heading">Contact</h1>
     </header>
     <main>
         <form action="submit" method="post">
@@ -37,9 +37,36 @@
     <option value="Tesla" selected>Tesla</option>
     <option value="Ford">Ford</option>
 </select>
-<button type="submit">Submit</button>
+<br/>
+<label for="radio">Select One</label>
+<input type="radio" name="select" id="" value="MyRadio" />
+<input type="radio" name="select" id="" value="MyRadio1" />
+<input type="radio" name="select" id="" value="MyRadio2" />
+</br>
+<time onclick=""></time>
+<script>
+function time() {
+    document.getElementById("datebtn").innetHTML = getDate();
+  }
+
+</script>
+<p id="datebtn">time is =</p>
+
+<button type="button" onclick="time()">click to show the time
+</button>
         </form>
     </main>
+    <button onclick="changeHeading()"> Change Heading</button>
+    </div>
+    <script>
+        function changeHeading(){
+            const heading = document.getElementById('heading')
+            console.log(heading)
+
+            heading.innerText = "i'm new"
+            heading.style.color 
+        }
+    </script>
     
 </body>
 </html>
